@@ -79,7 +79,9 @@ int main() {
                 cout << "Wrong input. Try again!" << endl;
                 continue;
             }
-            cout << endl << "Data set read successfully!" << endl;
+
+            cout << "Quantity of edges: " << graph.getEdges().size() << endl;
+//            graph.printGraph();
           //Functionalities
         } else if(menu.menuOption == 2 && !graph.getEmptyGraph()) {
             menu.showMenuOpt2();

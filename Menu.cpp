@@ -113,7 +113,9 @@ void Menu::showMenuOpt2_1(Graph graph) {
     // Start the clock
     auto start = std::chrono::high_resolution_clock::now();
 
-    cout << "Shortest path found: " << solveTSP(graph) << endl;
+    double shortest_path = solveTSP(graph);
+
+    cout << "Shortest path found: " << shortest_path << endl;
 
     // Stop the clock
     auto end = std::chrono::high_resolution_clock::now();

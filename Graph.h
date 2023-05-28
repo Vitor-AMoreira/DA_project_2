@@ -5,14 +5,18 @@
 #ifndef DA_PROJECT_2_GRAPH_H
 #define DA_PROJECT_2_GRAPH_H
 
+#include "Node_Edge.h"
+
 #include <vector>
 #include <fstream>
 #include <string>
 #include <iostream>
 #include <unordered_map>
 #include <iomanip>
-#include "Node_Edge.h"
 #include <map>
+#include <queue>
+#include <unordered_map>
+#include <limits>
 
 class Graph {
 private:
@@ -37,6 +41,10 @@ public:
     void addNodeWithCoords(string index, string longitude, string latitude);
 
     void addEdge(Node* source, Node* target, double distance);
+
+    void completeEdges();
+    double calculateDistance(Node*, Node*);
+    double getDistance(Node*, Node*);
 
     void printGraph();
 
