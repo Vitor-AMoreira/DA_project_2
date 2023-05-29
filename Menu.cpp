@@ -129,3 +129,29 @@ void Menu::showMenuOpt2_1(Graph graph) {
     cout << "Press any key to return to main menu" << endl;
     _getch();
 }
+
+//Triangular Approximation Heuristic
+void Menu::showMenuOpt2_2(Graph graph) {
+
+    cout << endl;
+    cout << "Triangular Approximation Heuristic running..." << endl;
+
+    // Start the clock
+    auto start = std::chrono::high_resolution_clock::now();
+
+    double shortest_path = tspTriangularApproximation(graph);
+
+    cout << "Shortest path found: " << shortest_path << endl;
+
+    // Stop the clock
+    auto end = std::chrono::high_resolution_clock::now();
+
+    // Calculate the duration
+    chrono::duration<double> duration = end - start;
+
+    // Convert duration to seconds
+    double durationInSeconds = duration.count();
+    cout << "Time taken to run the algorithm: " << durationInSeconds << " seconds" << endl;
+    cout << "Press any key to return to main menu" << endl;
+    _getch();
+}

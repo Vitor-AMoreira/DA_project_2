@@ -11,8 +11,8 @@ Node::Node(string index) {
 
 Node::Node(string index, string longitude, string latitude) {
     this->index = stoi(index);
-    this->longitude = longitude;
-    this->latitude = latitude;
+    this->longitude = stoi(longitude);
+    this->latitude = stoi(latitude);
 }
 
 void Node::print() {

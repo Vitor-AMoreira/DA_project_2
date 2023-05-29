@@ -1,6 +1,5 @@
 #include <iostream>
 
-#include "Graph.h"
 #include "Menu.h"
 
 using namespace std;
@@ -88,6 +87,9 @@ int main() {
             if(menu.menuOption == 0) continue;
             else if(menu.menuOption == 1) {
                 menu.showMenuOpt2_1(graph);
+            }
+            else if(menu.menuOption == 2) {
+                menu.showMenuOpt2_2(graph);
             }
         } else if(graph.getEmptyGraph()) {
             cout << "You must read a graph from the csv files before using any other operation!" << endl;

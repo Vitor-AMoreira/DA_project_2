@@ -16,8 +16,8 @@ using namespace std;
 class Node {
 public:
     int index;
-    string latitude="";
-    string longitude="";
+    double latitude;
+    double longitude;
 
     Node(string index);
     Node(string index, string longitude, string latitude);

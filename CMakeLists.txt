@@ -13,4 +13,5 @@ add_executable(DA_project_2
         Menu.cpp
         Menu.h
         Algorithms.cpp
-        main.cpp)
+        main.cpp
+        auxFunctions.cpp)

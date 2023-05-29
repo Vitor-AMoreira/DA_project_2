@@ -26,6 +26,8 @@ public:
 
     void showMenuOpt2();
     void showMenuOpt2_1(Graph graph);
+    void showMenuOpt2_2(Graph graph);
+
 
     void clearBuffer();
 };
