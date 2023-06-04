@@ -1,6 +1,4 @@
-//
-// Created by Vitor on 16/05/2023.
-//
+
 
 #ifndef DA_PROJECT_2_MENU_H
 #define DA_PROJECT_2_MENU_H
@@ -25,7 +23,8 @@ public:
     void showMenuOpt1_3();
 
     void showMenuOpt2();
-    void showMenuOpt2_1(Graph graph);
+    static void showMenuOpt2_1(Graph);
+    static void showMenuOpt2_2(Graph);
 
     void clearBuffer();
 };

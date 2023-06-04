@@ -60,7 +60,7 @@ int main() {
                 } else if(menu.menuOption == 6) {
                     graph = Graph("../Extra_Fully_Connected_Graphs/Extra_Fully_Connected_Graphs/edges_300.csv");
                 } else if(menu.menuOption == 7) {
-                    graph = Graph("../Extra_Fully_Connected_Graphs/Extra_Fully_Connected_Graphs/edges_400.csv");
+                    graph = Graph("..//Extra_Fully_Connected_Graphs/edges_400.csv");
                 } else if(menu.menuOption == 8) {
                     graph = Graph("../Extra_Fully_Connected_Graphs/Extra_Fully_Connected_Graphs/edges_500.csv");
                 } else if(menu.menuOption == 9) {
@@ -88,6 +88,8 @@ int main() {
             if(menu.menuOption == 0) continue;
             else if(menu.menuOption == 1) {
                 menu.showMenuOpt2_1(graph);
+            } else if(menu.menuOption == 2) {
+                menu.showMenuOpt2_2(graph);
             }
         } else if(graph.getEmptyGraph()) {
             cout << "You must read a graph from the csv files before using any other operation!" << endl;

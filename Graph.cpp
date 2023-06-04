@@ -223,7 +223,7 @@ double Graph::getDistance(Node* source, Node* target) {
             return edge.distance;
         }
     }
-
+//    cout << "There is no path between the nodes: " << source->index << " and " << target->index << endl;
     // If no edge is found between the source and target nodes, return a placeholder distance
     return numeric_limits<double>::infinity();
 
