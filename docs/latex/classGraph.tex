@@ -1,0 +1,218 @@
+\hypertarget{classGraph}{}\doxysection{Graph Class Reference}
+\label{classGraph}\index{Graph@{Graph}}
+
+
+Class that represents the graph. It\textquotesingle{}s composed by an adjacency list, a node\textquotesingle{}s vector and it\textquotesingle{}s cluster distribution.  
+
+
+
+
+{\ttfamily \#include $<$Graph.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGraph_a90961be426ad80001cbc103b6385df31}\label{classGraph_a90961be426ad80001cbc103b6385df31}} 
+\mbox{\hyperlink{classGraph_a90961be426ad80001cbc103b6385df31}{Graph}} ()=default
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classGraph_a8632d0649a28349904cf64bc0b9ee815}{Graph}} (string filename, int num\+Nodes)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classGraph}{Graph}} object. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classGraph_a6599fb8b94128ff5da7c3cdfbdcf2ed9}{get\+Num\+Nodes}} () const
+\begin{DoxyCompactList}\small\item\em Get the Num Nodes object. \end{DoxyCompactList}\item 
+vector$<$ list$<$ \mbox{\hyperlink{classEdge}{Edge}} $>$ $>$ \mbox{\hyperlink{classGraph_ab4510715fbf9b10d8a66863d81b3fe1d}{get\+Adj\+List}} () const
+\begin{DoxyCompactList}\small\item\em Get the Adj List object. \end{DoxyCompactList}\item 
+list$<$ \mbox{\hyperlink{classEdge}{Edge}} $>$ \mbox{\hyperlink{classGraph_acd2ab42264b911c33122b00fa0565871}{get\+Neighbors}} (int node) const
+\begin{DoxyCompactList}\small\item\em Get the Adjacency List of the especific node. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classGraph_a37d317bc312f087dcbf20b6921c8231f}{get\+Distance}} (int source, int destination, bool fake) const
+\begin{DoxyCompactList}\small\item\em Get the distance betteen two nodes. \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{classNode}{Node}} $\ast$ $>$ \mbox{\hyperlink{classGraph_a96a17d41a481f0933170461dfaf9abef}{get\+Nodes}} ()
+\begin{DoxyCompactList}\small\item\em Get the Nodes vector (only for real-\/world graphs) \end{DoxyCompactList}\item 
+vector$<$ vector$<$ int $>$ $>$ \mbox{\hyperlink{classGraph_a33e4e62d3a37a2d90587a7b2c7df56d6}{get\+Clusters}} ()
+\begin{DoxyCompactList}\small\item\em Get the Clusters vector. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classGraph_ad8fb81fae98a708a27866219a811fe38}{calculate\+Path\+Length}} (vector$<$ int $>$ path, bool fake) const
+\begin{DoxyCompactList}\small\item\em Calculates the path\textquotesingle{}s length. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classGraph}{Graph}} \mbox{\hyperlink{classGraph_ab648ad9e3e9df5d343318d4c40e93f38}{create\+M\+ST}} (int start\+Node) const
+\begin{DoxyCompactList}\small\item\em Creates a minimal spanning tree for the graph. \end{DoxyCompactList}\item 
+vector$<$ vector$<$ int $>$ $>$ \mbox{\hyperlink{classGraph_a7e5fa220b2653114e72619c7af652048}{divide\+Using\+K\+Means}} (int k)
+\begin{DoxyCompactList}\small\item\em K-\/means algorithm to divide the problem into smaller subproblems. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class that represents the graph. It\textquotesingle{}s composed by an adjacency list, a node\textquotesingle{}s vector and it\textquotesingle{}s cluster distribution. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classGraph_a8632d0649a28349904cf64bc0b9ee815}\label{classGraph_a8632d0649a28349904cf64bc0b9ee815}} 
+\index{Graph@{Graph}!Graph@{Graph}}
+\index{Graph@{Graph}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{Graph()}{Graph()}}
+{\footnotesize\ttfamily Graph\+::\+Graph (\begin{DoxyParamCaption}\item[{string}]{filename,  }\item[{int}]{num\+Nodes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new \mbox{\hyperlink{classGraph}{Graph}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Name of file to read where the graph is stored \\
+\hline
+{\em num\+Nodes} & Total number of nodes of the graph \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classGraph_ad8fb81fae98a708a27866219a811fe38}\label{classGraph_ad8fb81fae98a708a27866219a811fe38}} 
+\index{Graph@{Graph}!calculatePathLength@{calculatePathLength}}
+\index{calculatePathLength@{calculatePathLength}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{calculatePathLength()}{calculatePathLength()}}
+{\footnotesize\ttfamily double Graph\+::calculate\+Path\+Length (\begin{DoxyParamCaption}\item[{vector$<$ int $>$}]{path,  }\item[{bool}]{fake }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Calculates the path\textquotesingle{}s length. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & Path for wich we will calculate the length \\
+\hline
+{\em fake} & Flag to distinguish if the function can or not use the nodes coordinates to calculate the distance betweeen them in case the edge between them doesn\textquotesingle{}t exist. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double Path\textquotesingle{}s total length 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGraph_ab648ad9e3e9df5d343318d4c40e93f38}\label{classGraph_ab648ad9e3e9df5d343318d4c40e93f38}} 
+\index{Graph@{Graph}!createMST@{createMST}}
+\index{createMST@{createMST}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{createMST()}{createMST()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classGraph}{Graph}} Graph\+::create\+M\+ST (\begin{DoxyParamCaption}\item[{int}]{start\+Node }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates a minimal spanning tree for the graph. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em start\+Node} & Initial \mbox{\hyperlink{classNode}{Node}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classGraph}{Graph}} A graph with only the mst edges 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGraph_a7e5fa220b2653114e72619c7af652048}\label{classGraph_a7e5fa220b2653114e72619c7af652048}} 
+\index{Graph@{Graph}!divideUsingKMeans@{divideUsingKMeans}}
+\index{divideUsingKMeans@{divideUsingKMeans}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{divideUsingKMeans()}{divideUsingKMeans()}}
+{\footnotesize\ttfamily vector$<$vector$<$int$>$ $>$ Graph\+::divide\+Using\+K\+Means (\begin{DoxyParamCaption}\item[{int}]{k }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+K-\/means algorithm to divide the problem into smaller subproblems. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & Number of clusters to divide the nodes \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector$<$vector$<$int$>$$>$ Nodes divided into clusters 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGraph_ab4510715fbf9b10d8a66863d81b3fe1d}\label{classGraph_ab4510715fbf9b10d8a66863d81b3fe1d}} 
+\index{Graph@{Graph}!getAdjList@{getAdjList}}
+\index{getAdjList@{getAdjList}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{getAdjList()}{getAdjList()}}
+{\footnotesize\ttfamily vector$<$list$<$\mbox{\hyperlink{classEdge}{Edge}}$>$ $>$ Graph\+::get\+Adj\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the Adj List object. 
+
+\begin{DoxyReturn}{Returns}
+vector$<$list$<$\+Edge$>$$>$ Adjacency List of the graph 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGraph_a33e4e62d3a37a2d90587a7b2c7df56d6}\label{classGraph_a33e4e62d3a37a2d90587a7b2c7df56d6}} 
+\index{Graph@{Graph}!getClusters@{getClusters}}
+\index{getClusters@{getClusters}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{getClusters()}{getClusters()}}
+{\footnotesize\ttfamily vector$<$vector$<$int$>$ $>$ Graph\+::get\+Clusters (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the Clusters vector. 
+
+\begin{DoxyReturn}{Returns}
+vector$<$vector$<$int$>$$>$ vector of wich cluster every node is assigned to 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGraph_a37d317bc312f087dcbf20b6921c8231f}\label{classGraph_a37d317bc312f087dcbf20b6921c8231f}} 
+\index{Graph@{Graph}!getDistance@{getDistance}}
+\index{getDistance@{getDistance}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{getDistance()}{getDistance()}}
+{\footnotesize\ttfamily double Graph\+::get\+Distance (\begin{DoxyParamCaption}\item[{int}]{source,  }\item[{int}]{destination,  }\item[{bool}]{fake }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the distance betteen two nodes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & Id of node1 \\
+\hline
+{\em destination} & Id of node2 \\
+\hline
+{\em fake} & Flag to distinguish if the function can or not use the nodes coordinates to calculate the distance betweeen them in case the edge between them doesn\textquotesingle{}t exist. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double distance between node1 and node2 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGraph_acd2ab42264b911c33122b00fa0565871}\label{classGraph_acd2ab42264b911c33122b00fa0565871}} 
+\index{Graph@{Graph}!getNeighbors@{getNeighbors}}
+\index{getNeighbors@{getNeighbors}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{getNeighbors()}{getNeighbors()}}
+{\footnotesize\ttfamily list$<$\mbox{\hyperlink{classEdge}{Edge}}$>$ Graph\+::get\+Neighbors (\begin{DoxyParamCaption}\item[{int}]{node }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the Adjacency List of the especific node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & \mbox{\hyperlink{classNode}{Node}} of wich we want the adjacency list \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list$<$\+Edge$>$ Edges to the \char`\"{}neighbors\char`\"{} of the node 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGraph_a96a17d41a481f0933170461dfaf9abef}\label{classGraph_a96a17d41a481f0933170461dfaf9abef}} 
+\index{Graph@{Graph}!getNodes@{getNodes}}
+\index{getNodes@{getNodes}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{getNodes()}{getNodes()}}
+{\footnotesize\ttfamily vector$<$\mbox{\hyperlink{classNode}{Node}} $\ast$$>$ Graph\+::get\+Nodes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the Nodes vector (only for real-\/world graphs) 
+
+\begin{DoxyReturn}{Returns}
+vector$<$\+Node $\ast$$>$ vector of nodes of the graph 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGraph_a6599fb8b94128ff5da7c3cdfbdcf2ed9}\label{classGraph_a6599fb8b94128ff5da7c3cdfbdcf2ed9}} 
+\index{Graph@{Graph}!getNumNodes@{getNumNodes}}
+\index{getNumNodes@{getNumNodes}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{getNumNodes()}{getNumNodes()}}
+{\footnotesize\ttfamily int Graph\+::get\+Num\+Nodes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the Num Nodes object. 
+
+\begin{DoxyReturn}{Returns}
+int Total number of nodes in the graph 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/mnt/d/\+F\+E\+U\+P/2022-\/23/\+D\+A/\+Project2/src/\mbox{\hyperlink{Graph_8h}{Graph.\+h}}\end{DoxyCompactItemize}

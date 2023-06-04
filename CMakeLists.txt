@@ -1,17 +1,11 @@
-cmake_minimum_required(VERSION 3.21)
-project(DA_project_2)
+cmake_minimum_required(VERSION 3.25)
+project(Project2)
 
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 17)
 
-include_directories(.)
-
-add_executable(DA_project_2
-        Graph.cpp
-        Graph.h
-        Node_Edge.cpp
-        Node_Edge.h
-        Menu.cpp
-        Menu.h
-        Algorithms.cpp
-        main.cpp
-        auxFunctions.cpp)
+add_executable( Project2
+                src/main.cpp
+                src/Graph.h
+                src/Menu.cpp
+                src/Menu.h
+                src/TSPAlgorithms.cpp)
