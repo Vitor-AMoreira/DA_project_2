@@ -1,0 +1,79 @@
+\hypertarget{Graph_8h}{}\doxysection{/mnt/d/\+F\+E\+U\+P/2022-\/23/\+D\+A/\+Project2/src/\+Graph.h File Reference}
+\label{Graph_8h}\index{/mnt/d/FEUP/2022-\/23/DA/Project2/src/Graph.h@{/mnt/d/FEUP/2022-\/23/DA/Project2/src/Graph.h}}
+
+
+This file handles the creation and utilization of graphs, edges and nodes.  
+
+
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$list$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$queue$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$random$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+Include dependency graph for Graph.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classNode}{Node}}
+\begin{DoxyCompactList}\small\item\em Class that represents each node of the graph. It\textquotesingle{}s composed by it\textquotesingle{}s id, latitude and longitude. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classEdge}{Edge}}
+\begin{DoxyCompactList}\small\item\em Class that represents each edge of the graph. It\textquotesingle{}s composed by it\textquotesingle{}s source node id, destination node id and it\textquotesingle{}s weigth(length). \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structCompareEdges}{Compare\+Edges}}
+\begin{DoxyCompactList}\small\item\em Struct to more easily compare edges by their weigths. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classGraph}{Graph}}
+\begin{DoxyCompactList}\small\item\em Class that represents the graph. It\textquotesingle{}s composed by an adjacency list, a node\textquotesingle{}s vector and it\textquotesingle{}s cluster distribution. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+constexpr double \mbox{\hyperlink{Graph_8h_a2e585bd155a42febbf4b6d233b5402b0}{to\+Radians}} = M\+\_\+\+PI / 180.\+0
+\begin{DoxyCompactList}\small\item\em Variable to easily convert values from degrees to radians. \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{Graph_8h_a9e3cc031935e53856563a04924f6af7d}{step\+Size}} = 100
+\begin{DoxyCompactList}\small\item\em Variable that represents the average nodes per centroid. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file handles the creation and utilization of graphs, edges and nodes. 
+
+\begin{DoxyAuthor}{Author}
+G04\+\_\+\+T07 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2023-\/06-\/04
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2023 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{Graph_8h_a9e3cc031935e53856563a04924f6af7d}\label{Graph_8h_a9e3cc031935e53856563a04924f6af7d}} 
+\index{Graph.h@{Graph.h}!stepSize@{stepSize}}
+\index{stepSize@{stepSize}!Graph.h@{Graph.h}}
+\doxysubsubsection{\texorpdfstring{stepSize}{stepSize}}
+{\footnotesize\ttfamily const int step\+Size = 100}
+
+
+
+Variable that represents the average nodes per centroid. 
+
+\mbox{\Hypertarget{Graph_8h_a2e585bd155a42febbf4b6d233b5402b0}\label{Graph_8h_a2e585bd155a42febbf4b6d233b5402b0}} 
+\index{Graph.h@{Graph.h}!toRadians@{toRadians}}
+\index{toRadians@{toRadians}!Graph.h@{Graph.h}}
+\doxysubsubsection{\texorpdfstring{toRadians}{toRadians}}
+{\footnotesize\ttfamily constexpr double to\+Radians = M\+\_\+\+PI / 180.\+0\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Variable to easily convert values from degrees to radians. 
+
